@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
+import jpabook.jpashop.domain.Member;
 
 public class JpaMain {
 
@@ -17,7 +18,10 @@ public class JpaMain {
 
         try {
 
+            Member member = new Member();
+            member.setName("John");
 
+            em.persist(member);
 
             tx.commit(); //커밋시 SQL문 나감
         } catch (Exception e) {
