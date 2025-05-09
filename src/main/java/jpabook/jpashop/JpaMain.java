@@ -21,7 +21,10 @@ public class JpaMain {
             Member member = new Member();
             member.setName("John");
 
+            System.out.println("======================");
             em.persist(member);
+            System.out.println("member.getName() = " + member.getName());
+            System.out.println("======================");
 
             tx.commit(); //커밋시 SQL문 나감
         } catch (Exception e) {
