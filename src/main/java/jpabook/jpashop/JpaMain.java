@@ -20,6 +20,10 @@ public class JpaMain {
 
         try {
 
+            Member member = new Member();
+            member.setName("John");
+            em.persist(member);
+
             Order order = new Order();
             order.addOrderItem(new OrderItem());
 
