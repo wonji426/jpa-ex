@@ -24,6 +24,12 @@ public class JpaMain {
             member.setName("John");
             em.persist(member);
 
+            System.out.println("======================");
+
+            System.out.println("member = " + member.getName());
+
+            System.out.println("======================");
+
             Order order = new Order();
             order.addOrderItem(new OrderItem());
 
